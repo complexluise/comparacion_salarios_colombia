@@ -9,36 +9,36 @@ st.set_page_config(
 )
 
 # Sidebar configuration
-st.sidebar.subheader("Ajustes de Cálculo")
 with st.sidebar:
-    st.write("Ajusta los porcentajes utilizados en los cálculos:")
-    porcentaje_prestaciones = st.slider(
-        "Porcentaje Prestaciones Sociales", 0.0, 0.5, 0.35, 0.01,
-        help="Prima, cesantías, vacaciones... ese combo que no ves en prestación de servicios."
-    )
-    porcentaje_salud = st.slider(
-        "Porcentaje Salud (sobre base cotización)", 0.0, 0.2, 0.125, 0.005,
-        help="Porcentaje del 40% de la tarifa destinado a salud."
-    )
-    porcentaje_pension = st.slider(
-        "Porcentaje Pensión (sobre base cotización)", 0.0, 0.2, 0.125, 0.005,
-        help="Porcentaje del 40% de la tarifa destinado a pensión."
-    )
-    porcentaje_riesgos = st.slider(
-        "Porcentaje Riesgos Laborales (sobre base cotización)", 0.0, 0.05, 0.01, 0.001,
-        help="Costo de riesgos laborales aplicado sobre la base del 40%."
-    )
+    with st.expander("⚙️ Ajustes de Cálculo", expanded=True):
+        st.write("Ajusta los porcentajes utilizados en los cálculos:")
+        porcentaje_prestaciones = st.slider(
+            "Porcentaje Prestaciones Sociales", 0.0, 0.5, 0.35, 0.01,
+            help="Prima, cesantías, vacaciones... ese combo que no ves en prestación de servicios."
+        )
+        porcentaje_salud = st.slider(
+            "Porcentaje Salud (sobre base cotización)", 0.0, 0.2, 0.125, 0.005,
+            help="Porcentaje del 40% de la tarifa destinado a salud."
+        )
+        porcentaje_pension = st.slider(
+            "Porcentaje Pensión (sobre base cotización)", 0.0, 0.2, 0.125, 0.005,
+            help="Porcentaje del 40% de la tarifa destinado a pensión."
+        )
+        porcentaje_riesgos = st.slider(
+            "Porcentaje Riesgos Laborales (sobre base cotización)", 0.0, 0.05, 0.01, 0.001,
+            help="Costo de riesgos laborales aplicado sobre la base del 40%."
+        )
 
     st.markdown("---")
-    st.subheader("Proyectos Recomendados")
+    st.subheader("🌟 Proyectos Recomendados")
+    st.caption("Otras herramientas que te pueden servir:")
     st.markdown(
-        "- [**bib2graph**](https://complexluise.github.io/bib2graph/): "
-        "Herramienta para investigadores que construye grafos de conocimiento "
-        "a partir de bibliografías."
+        "📊 [**bib2graph**](https://complexluise.github.io/bib2graph/)  \n"
+        "Grafos de conocimiento a partir de bibliografías, para investigadores."
     )
     st.markdown(
-        "- [**Chatea con tus derechos laborales**](https://chatea-con-tus-derechos-laborales.streamlit.app/): "
-        "Resuelve tus dudas sobre derechos laborales conversando con una IA."
+        "⚖️ [**Chatea con tus derechos laborales**](https://chatea-con-tus-derechos-laborales.streamlit.app/)  \n"
+        "Resuelve dudas laborales conversando con una IA."
     )
 
 # Main title and introduction
