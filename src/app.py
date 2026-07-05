@@ -29,6 +29,18 @@ with st.sidebar:
         help="Costo de riesgos laborales aplicado sobre la base del 40%."
     )
 
+    st.markdown("---")
+    st.subheader("Proyectos Recomendados")
+    st.markdown(
+        "- [**bib2graph**](https://complexluise.github.io/bib2graph/): "
+        "Herramienta para investigadores que construye grafos de conocimiento "
+        "a partir de bibliografías."
+    )
+    st.markdown(
+        "- [**Chatea con tus derechos laborales**](https://chatea-con-tus-derechos-laborales.streamlit.app/): "
+        "Resuelve tus dudas sobre derechos laborales conversando con una IA."
+    )
+
 # Main title and introduction
 st.title("📑 Calculadora de Contratos en Colombia")
 st.write("""
